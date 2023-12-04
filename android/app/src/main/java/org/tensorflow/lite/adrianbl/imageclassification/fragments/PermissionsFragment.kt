@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.imageclassification.fragments
+package org.tensorflow.lite.adrianbl.imageclassification.fragments
 
 import android.Manifest
 import android.content.Context
@@ -26,7 +26,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
-import org.tensorflow.lite.examples.imageclassification.R
+import org.tensorflow.lite.adrianbl.imageclassification.R
 
 private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
 
@@ -37,10 +37,10 @@ class PermissionsFragment : Fragment() {
             ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                Toast.makeText(context, "Permission request granted", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Solicitud de permiso concedida", Toast.LENGTH_LONG).show()
                 navigateToCamera()
             } else {
-                Toast.makeText(context, "Permission request denied", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Solicitud de permiso denegada", Toast.LENGTH_LONG).show()
             }
         }
 

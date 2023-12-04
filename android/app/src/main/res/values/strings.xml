@@ -14,7 +14,7 @@
         ~ limitations under the License.
     -->
 <resources>
-    <string name="app_name">TFLite Image Classification</string>
+    <string name="app_name">Clasificador Flores TF</string>
 
     <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
 
@@ -29,13 +29,13 @@
     <string name="alt_bottom_sheet_thread_button_minus">Decrease the number of threads used</string>
     <string name="alt_bottom_sheet_thread_button_plus">Increase the number of threads used</string>
 
-    <string name="label_interence_time">Inference Time</string>
-    <string name="label_fps">Frames per Second</string>
-    <string name="label_confidence_threshold">Threshold</string>
-    <string name="label_max_results">Max Results</string>
-    <string name="label_threads">Number of Threads</string>
-    <string name="label_delegate">Delegate</string>
-    <string name="label_models">ML Model</string>
+    <string name="label_interence_time">Tiempo de inferencia</string>
+    <string name="label_fps">Cuadros por segundo</string>
+    <string name="label_confidence_threshold">Límite</string>
+    <string name="label_max_results">Resultados máximos</string>
+    <string name="label_threads">Número de hilos</string>
+    <string name="label_delegate">Delegar</string>
+    <string name="label_models">Modelo ML</string>
 
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>

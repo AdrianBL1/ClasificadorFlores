@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.imageclassification.fragments
+package org.tensorflow.lite.adrianbl.imageclassification.fragments
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -36,9 +36,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import org.tensorflow.lite.examples.imageclassification.ImageClassifierHelper
-import org.tensorflow.lite.examples.imageclassification.R
-import org.tensorflow.lite.examples.imageclassification.databinding.FragmentCameraBinding
+import org.tensorflow.lite.adrianbl.imageclassification.ImageClassifierHelper
+import org.tensorflow.lite.adrianbl.imageclassification.R
+import org.tensorflow.lite.adrianbl.imageclassification.databinding.FragmentCameraBinding
 import org.tensorflow.lite.task.vision.classifier.Classifications
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -46,7 +46,7 @@ import java.util.concurrent.Executors
 class CameraFragment : Fragment(), ImageClassifierHelper.ClassifierListener {
 
     companion object {
-        private const val TAG = "Image Classifier"
+        private const val TAG = "Clasificador de imágenes"
     }
 
     private var _fragmentCameraBinding: FragmentCameraBinding? = null
@@ -249,7 +249,7 @@ class CameraFragment : Fragment(), ImageClassifierHelper.ClassifierListener {
 
         // CameraProvider
         val cameraProvider =
-            cameraProvider ?: throw IllegalStateException("Camera initialization failed.")
+            cameraProvider ?: throw IllegalStateException("Falló la inicialización de la cámara.")
 
         // CameraSelector - makes assumption that we're only using the back camera
         val cameraSelector =
@@ -298,7 +298,7 @@ class CameraFragment : Fragment(), ImageClassifierHelper.ClassifierListener {
             // Attach the viewfinder's surface provider to preview use case
             preview?.setSurfaceProvider(fragmentCameraBinding.viewFinder.surfaceProvider)
         } catch (exc: Exception) {
-            Log.e(TAG, "Use case binding failed", exc)
+            Log.e(TAG, "Error al vincular el caso de uso", exc)
         }
     }
 

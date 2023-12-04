@@ -17,7 +17,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.tensorflow.lite.examples.imageclassification">
+    package="org.tensorflow.lite.adrianbl.imageclassification">
 
     <!-- Enable instant app support -->
     <dist:module dist:instant="true" />
@@ -38,7 +38,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name=".MainActivity"
+            android:name="org.tensorflow.lite.adrianbl.imageclassification.MainActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
             android:exported="true"

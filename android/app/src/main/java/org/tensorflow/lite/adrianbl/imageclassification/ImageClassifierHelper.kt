@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.imageclassification
+package org.tensorflow.lite.adrianbl.imageclassification
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -24,7 +24,6 @@ import android.view.Surface
 import org.tensorflow.lite.gpu.CompatibilityList
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
-import org.tensorflow.lite.support.image.ops.Rot90Op
 import org.tensorflow.lite.task.core.BaseOptions
 import org.tensorflow.lite.task.core.vision.ImageProcessingOptions
 import org.tensorflow.lite.task.vision.classifier.Classifications
@@ -64,7 +63,7 @@ class ImageClassifierHelper(
                 if (CompatibilityList().isDelegateSupportedOnThisDevice) {
                     baseOptionsBuilder.useGpu()
                 } else {
-                    imageClassifierListener?.onError("GPU is not supported on this device")
+                    imageClassifierListener?.onError("GPU no es compatible con este dispositivo")
                 }
             }
             DELEGATE_NNAPI -> {
@@ -89,9 +88,9 @@ class ImageClassifierHelper(
                 ImageClassifier.createFromFileAndOptions(context, modelName, optionsBuilder.build())
         } catch (e: IllegalStateException) {
             imageClassifierListener?.onError(
-                "Image classifier failed to initialize. See error logs for details"
+                "El clasificador de imágenes no pudo inicializarse. Consulte los registros de errores para obtener más detalles."
             )
-            Log.e(TAG, "TFLite failed to load model with error: " + e.message)
+            Log.e(TAG, "TFLite no pudo cargar el modelo con error: " + e.message)
         }
     }
 
